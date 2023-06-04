@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Noteook_shop">
+    <listeners>
+        <listener class-name="com.gomel.taf.framework.utils.TestListener"/>
+    </listeners>
+    <test name="Noteook_shop_all_test">
+        <classes>
+            <class name="com.gomel.taf.test.CartTest">
+                <methods>
+                    <include name="checkCartIsEmpty"/>
+                    <include name="checkCartContainsOneNonDiscountedItem"/>
+                    <include name="checkCartContainsOneDiscountedItem"/>
+                    <include name="checkCartContainsNineItems"/>
+                    <include name="checkCartContainsNineSameDiscountItem"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
